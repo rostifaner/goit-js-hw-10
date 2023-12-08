@@ -2,6 +2,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 25px;
   margin: 50px;
+  background-color: #f5d2be;
 }
 
 img {
@@ -59,10 +60,14 @@ img {
 
 .cat-img {
   transition: transform 0.5s ease-in-out;
+  box-shadow: 1px 1px 77px -23px rgba(0, 0, 0, 1);
+  border-radius: 10;
+  border: solid 1px;
 }
 
 .cat-img:hover {
-  transform: scale(1.2);
+  transform: scale(2);
+  box-shadow: 1px 1px 77px -23px rgba(0, 0, 0, 1);
 }
 
 .tem-title {
