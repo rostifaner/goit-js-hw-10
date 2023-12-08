@@ -44,16 +44,12 @@ img {
 .cat-info {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
 }
 
-.cat-img {
-  /* display: flex; */
-}
 .cat-breeds {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 30px;
 }
 .cat-desc {
   font-size: 25px;

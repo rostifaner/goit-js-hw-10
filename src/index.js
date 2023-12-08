@@ -45,7 +45,7 @@ function handlerChange(event) {
       const { url, breeds } = catData[0];
       const markup = `
       <p class="cat-breeds">${breeds[0].name}</p>
-    <img class="cat-img" src="${url}" alt="${breeds[0].name}" height="400">
+    <img class="cat-img" src="${url}" alt="${breeds[0].name}" height="300">
     
     <p class="cat-desc">${breeds[0].description}</p>
     <p class="cat-temp"><span class="tem-title">Temperament:</span> ${breeds[0].temperament}</p>
