@@ -6,7 +6,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 const selectElem = document.querySelector('.breed-select');
 const catOutput = document.querySelector('.cat-info');
 const loader = document.querySelector('.loader');
-const errorLog = document.querySelector('.error');
+selectElem.addEventListener('change', handlerChange);
 
 showLoader();
 selectElem.style.display = 'none';
@@ -14,6 +14,8 @@ selectElem.style.display = 'none';
 fetchBreeds()
   .then(breeds => {
     selectElem.style.display = 'flex';
+    selectElem.innerHTML =
+      '<option disabled selected value="">Select a Breed</option>';
     breeds.forEach(breed => {
       const option = document.createElement('option');
       option.value = breed.id;
@@ -35,11 +37,10 @@ fetchBreeds()
     hideLoader();
   });
 
-selectElem.addEventListener('change', handlerChange);
-
 function handlerChange(event) {
   const selectedBreedId = event.target.value;
   showLoader();
+  catOutput.innerHTML = '';
   fetchCatByBreed(selectedBreedId)
     .then(catData => {
       const { url, breeds } = catData[0];
